@@ -34,8 +34,10 @@ extension PostListPresenter: PostListInteractorDelegate {
     case .posts(let posts):
       print(posts)
 //      view.handleOutput(<#T##output: PostListPresenterOutput##PostListPresenterOutput#>)
-    case .error(let error):
-      print(error.localizedDescription)
+    case .error:
+      DispatchQueue.main.async {
+        self.router.navigate(to: .alert(title: "Error", message: "An Error Occurred. Please, try again!"))
+      }
     }
   }
 }

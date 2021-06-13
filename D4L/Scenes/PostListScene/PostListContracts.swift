@@ -43,7 +43,7 @@ protocol PostListViewProtocol: AnyObject {
 
 // MARK: - Router
 enum PostListRoute: Equatable {
-
+  case alert(title: String, message: String)
 }
 
 protocol PostListRouterProtocol: AnyObject {
