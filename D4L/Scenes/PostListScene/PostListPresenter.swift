@@ -10,15 +10,22 @@ import Foundation
 
 final class PostListPresenter: PostListPresenterProtocol {
   
-  private unowned let view: PostListViewProtocol
+  private weak var view: PostListViewProtocol?
   
   private let interactor: PostListInteractorProtocol
   private let router: PostListRouterProtocol
+  private let factory: PostListViewModelFactoring
   
-  init(_ view: PostListViewProtocol, interactor: PostListInteractorProtocol, router: PostListRouterProtocol) {
+  init(
+    _ view: PostListViewProtocol,
+    interactor: PostListInteractorProtocol,
+    factory: PostListViewModelFactoring,
+    router: PostListRouterProtocol
+  ) {
     self.view = view
     self.interactor = interactor
     self.router = router
+    self.factory = factory
     self.interactor.delegate = self
   }
 
@@ -32,8 +39,10 @@ extension PostListPresenter: PostListInteractorDelegate {
   func handleOutput(_ output: PostListInteractorOutput) {
     switch output {
     case .posts(let posts):
-      print(posts)
-//      view.handleOutput(<#T##output: PostListPresenterOutput##PostListPresenterOutput#>)
+      let viewModels = factory.create(from: posts)
+      DispatchQueue.main.async {
+        self.view?.handleOutput(.posts(viewModels))
+      }
     case .error:
       DispatchQueue.main.async {
         self.router.navigate(to: .alert(title: "Error", message: "An Error Occurred. Please, try again!"))

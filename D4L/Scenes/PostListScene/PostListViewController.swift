@@ -26,6 +26,9 @@ final class PostListViewController: UIViewController {
 extension PostListViewController: PostListViewProtocol {
   
   func handleOutput(_ output: PostListPresenterOutput) {
-    
+    switch output {
+    case .posts(let viewModels):
+      print(viewModels)
+    }
   }
 }

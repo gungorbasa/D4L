@@ -32,7 +32,7 @@ protocol PostListPresenterProtocol: AnyObject {
 }
 
 enum PostListPresenterOutput: Equatable {
-
+  case posts([PostListViewModel])
 }
 
 // MARK: - View
