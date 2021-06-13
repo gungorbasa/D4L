@@ -28,11 +28,13 @@ protocol PostDetailsInteractorDelegate: AnyObject {
 
 // MARK: - Presenter
 protocol PostDetailsPresenterProtocol: AnyObject {
-  
+  func numberOfRows() -> Int
+  func viewModel(for index: Int) -> PostCommentViewModel?
 }
 
 enum PostDetailsPresenterOutput: Equatable {
-  
+  case reload
+  case configure(title: String, body: String)
 }
 
 // MARK: - View

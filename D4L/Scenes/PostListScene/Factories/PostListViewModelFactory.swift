@@ -13,6 +13,6 @@ protocol PostListViewModelFactoring {
 
 struct PostListViewModelFactory: PostListViewModelFactoring {
   func create(from posts: [Post]) -> [PostListViewModel] {
-    posts.map { PostListViewModel(title: $0.title, body: $0.body) }
+    posts.map { PostListViewModel(id: $0.id, title: $0.title, body: $0.body) }
   }
 }

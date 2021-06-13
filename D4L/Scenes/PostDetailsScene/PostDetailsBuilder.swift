@@ -18,7 +18,14 @@ final class PostDetailsBuilder {
     let router = PostDetailsRouter(view)
     let service = PostCommentsService(networking: NativeNetwork(decoder: JSONDecoder()))
     let interactor = PostDetailsInteractor(service: service)
-    let presenter = PostDetailsPresenter(view, interactor: interactor, router: router)
+    let factory = PostCommentViewModelFactory()
+    let presenter = PostDetailsPresenter(
+      view,
+      interactor: interactor,
+      router: router,
+      postListViewModel: viewModel,
+      factory: factory
+    )
     view.presenter = presenter
     return view
   }

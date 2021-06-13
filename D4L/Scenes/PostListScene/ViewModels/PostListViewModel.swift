@@ -8,6 +8,7 @@
 import Foundation
 
 struct PostListViewModel: Hashable {
+  let id: Int
   let title: String
   let body: String
 }
