@@ -35,6 +35,7 @@ final class PostListCell: UITableViewCell {
     stackView.axis = .vertical
     stackView.addArrangedSubview(title)
     stackView.addArrangedSubview(detail)
+    stackView.alignment = .fill
 
     contentView.addSubview(stackView)
     stackView.topAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.topAnchor, constant: 8).isActive = true

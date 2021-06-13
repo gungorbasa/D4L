@@ -37,9 +37,16 @@ extension PostListViewController: UITableViewDataSource {
   }
 }
 
+extension PostListViewController: UITableViewDelegate {
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    presenter.didSelect(at: indexPath.row)
+  }
+}
+
 private extension PostListViewController {
   func setup() {
     tableView.dataSource = self
+    tableView.delegate = self
     tableView.register(cell: PostListCell.self)
     tableView.separatorStyle = .none
   }

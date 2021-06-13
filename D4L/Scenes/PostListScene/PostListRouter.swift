@@ -20,6 +20,9 @@ final class PostListRouter: PostListRouterProtocol {
     switch route {
     case .alert(let title, let message):
       showAlertView(title: title, message: message)
+    case .detail(let viewModel):
+      // TODO: Route to details screen
+      print("Selected: \(viewModel)")
     }
   }
 }

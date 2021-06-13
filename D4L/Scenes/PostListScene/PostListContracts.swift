@@ -29,6 +29,7 @@ protocol PostListInteractorDelegate: AnyObject {
 // MARK: - Presenter
 protocol PostListPresenterProtocol: AnyObject {
   func onViewDidLoad()
+  func didSelect(at index: Int)
   func numberOfRows() -> Int
   func viewModelAt(index: Int) -> PostListViewModel?
 }
@@ -46,6 +47,7 @@ protocol PostListViewProtocol: AnyObject {
 // MARK: - Router
 enum PostListRoute: Equatable {
   case alert(title: String, message: String)
+  case detail(viewModel: PostListViewModel)
 }
 
 protocol PostListRouterProtocol: AnyObject {

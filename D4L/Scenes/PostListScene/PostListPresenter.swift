@@ -34,6 +34,12 @@ final class PostListPresenter: PostListPresenterProtocol {
     interactor.listPosts()
   }
 
+  func didSelect(at index: Int) {
+    guard viewModels.count > index else { return }
+    let viewModel = viewModels[index]
+    router.navigate(to: .detail(viewModel: viewModel))
+  }
+
   func numberOfRows() -> Int { viewModels.count }
 
   func viewModelAt(index: Int) -> PostListViewModel? {
