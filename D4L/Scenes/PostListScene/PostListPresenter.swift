@@ -21,11 +21,21 @@ final class PostListPresenter: PostListPresenterProtocol {
     self.router = router
     self.interactor.delegate = self
   }
+
+  func onViewDidLoad() {
+    interactor.listPosts()
+  }
 }
 
 extension PostListPresenter: PostListInteractorDelegate {
   
   func handleOutput(_ output: PostListInteractorOutput) {
-    
+    switch output {
+    case .posts(let posts):
+      print(posts)
+//      view.handleOutput(<#T##output: PostListPresenterOutput##PostListPresenterOutput#>)
+    case .error(let error):
+      print(error.localizedDescription)
+    }
   }
 }

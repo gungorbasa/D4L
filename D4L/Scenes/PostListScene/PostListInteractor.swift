@@ -16,4 +16,15 @@ final class PostListInteractor: PostListInteractorProtocol {
   init(service: PostListServing) {
     self.service = service
   }
+
+  func listPosts() {
+    service.make { [weak self] result in
+      switch result {
+      case .success(let posts):
+        self?.delegate?.handleOutput(.posts(posts))
+      case .failure(let error):
+        self?.delegate?.handleOutput(.error(error))
+      }
+    }
+  }
 }

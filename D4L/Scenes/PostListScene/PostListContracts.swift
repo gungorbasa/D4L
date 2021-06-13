@@ -12,10 +12,13 @@ import Foundation
 protocol PostListInteractorProtocol: AnyObject {
 
   var delegate: PostListInteractorDelegate? { get set }
+
+  func listPosts()
 }
 
 enum PostListInteractorOutput {
-
+  case posts([Post])
+  case error(Error)
 }
 
 protocol PostListInteractorDelegate: AnyObject {
@@ -25,7 +28,7 @@ protocol PostListInteractorDelegate: AnyObject {
 
 // MARK: - Presenter
 protocol PostListPresenterProtocol: AnyObject {
-
+  func onViewDidLoad()
 }
 
 enum PostListPresenterOutput: Equatable {
