@@ -12,7 +12,6 @@
 		2336D21C26760D14001AF9B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D21B26760D14001AF9B4 /* ViewController.swift */; };
 		2336D22126760D16001AF9B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2336D22026760D16001AF9B4 /* Assets.xcassets */; };
 		2336D22426760D16001AF9B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2336D22226760D16001AF9B4 /* LaunchScreen.storyboard */; };
-		2336D22F26760D16001AF9B4 /* D4LTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D22E26760D16001AF9B4 /* D4LTests.swift */; };
 		2336D23A26760D16001AF9B4 /* D4LUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D23926760D16001AF9B4 /* D4LUITests.swift */; };
 		2336D25126760D84001AF9B4 /* PostListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D24A26760D84001AF9B4 /* PostListPresenter.swift */; };
 		2336D25226760D84001AF9B4 /* PostListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D24B26760D84001AF9B4 /* PostListRouter.swift */; };
@@ -42,6 +41,14 @@
 		2336D29026762C5A001AF9B4 /* PostCommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D28F26762C5A001AF9B4 /* PostCommentViewModel.swift */; };
 		2336D29326762C8D001AF9B4 /* PostCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D29226762C8D001AF9B4 /* PostCommentCell.swift */; };
 		2336D29626762CF7001AF9B4 /* PostCommentFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D29526762CF7001AF9B4 /* PostCommentFactory.swift */; };
+		2336D29826763279001AF9B4 /* PostListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D29726763279001AF9B4 /* PostListInteractorTests.swift */; };
+		2336D29B26763389001AF9B4 /* MockPostListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D29A26763389001AF9B4 /* MockPostListService.swift */; };
+		2336D29E267633B2001AF9B4 /* PostListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D29D267633B2001AF9B4 /* PostListPresenterTests.swift */; };
+		2336D2A1267633DE001AF9B4 /* PostListFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D2A0267633DE001AF9B4 /* PostListFactoryTests.swift */; };
+		2336D2A326763C3D001AF9B4 /* MockPostListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D2A226763C3D001AF9B4 /* MockPostListInteractor.swift */; };
+		2336D2A526763C60001AF9B4 /* MockPostListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D2A426763C60001AF9B4 /* MockPostListRouter.swift */; };
+		2336D2A726763C74001AF9B4 /* MockPostListViewModelFacotry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D2A626763C74001AF9B4 /* MockPostListViewModelFacotry.swift */; };
+		2336D2A926763C85001AF9B4 /* MockPostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D2A826763C85001AF9B4 /* MockPostListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +77,6 @@
 		2336D22326760D16001AF9B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2336D22526760D16001AF9B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2336D22A26760D16001AF9B4 /* D4LTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = D4LTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2336D22E26760D16001AF9B4 /* D4LTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D4LTests.swift; sourceTree = "<group>"; };
 		2336D23026760D16001AF9B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2336D23526760D16001AF9B4 /* D4LUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = D4LUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2336D23926760D16001AF9B4 /* D4LUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D4LUITests.swift; sourceTree = "<group>"; };
@@ -102,6 +108,14 @@
 		2336D28F26762C5A001AF9B4 /* PostCommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCommentViewModel.swift; sourceTree = "<group>"; };
 		2336D29226762C8D001AF9B4 /* PostCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCommentCell.swift; sourceTree = "<group>"; };
 		2336D29526762CF7001AF9B4 /* PostCommentFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCommentFactory.swift; sourceTree = "<group>"; };
+		2336D29726763279001AF9B4 /* PostListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListInteractorTests.swift; sourceTree = "<group>"; };
+		2336D29A26763389001AF9B4 /* MockPostListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostListService.swift; sourceTree = "<group>"; };
+		2336D29D267633B2001AF9B4 /* PostListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListPresenterTests.swift; sourceTree = "<group>"; };
+		2336D2A0267633DE001AF9B4 /* PostListFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListFactoryTests.swift; sourceTree = "<group>"; };
+		2336D2A226763C3D001AF9B4 /* MockPostListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostListInteractor.swift; sourceTree = "<group>"; };
+		2336D2A426763C60001AF9B4 /* MockPostListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostListRouter.swift; sourceTree = "<group>"; };
+		2336D2A626763C74001AF9B4 /* MockPostListViewModelFacotry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostListViewModelFacotry.swift; sourceTree = "<group>"; };
+		2336D2A826763C85001AF9B4 /* MockPostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,7 +184,8 @@
 		2336D22D26760D16001AF9B4 /* D4LTests */ = {
 			isa = PBXGroup;
 			children = (
-				2336D22E26760D16001AF9B4 /* D4LTests.swift */,
+				2336D29C267633A5001AF9B4 /* PostList */,
+				2336D2992676337F001AF9B4 /* Mocks */,
 				2336D23026760D16001AF9B4 /* Info.plist */,
 			);
 			path = D4LTests;
@@ -316,6 +331,36 @@
 			isa = PBXGroup;
 			children = (
 				2336D29526762CF7001AF9B4 /* PostCommentFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		2336D2992676337F001AF9B4 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				2336D29A26763389001AF9B4 /* MockPostListService.swift */,
+				2336D2A226763C3D001AF9B4 /* MockPostListInteractor.swift */,
+				2336D2A426763C60001AF9B4 /* MockPostListRouter.swift */,
+				2336D2A626763C74001AF9B4 /* MockPostListViewModelFacotry.swift */,
+				2336D2A826763C85001AF9B4 /* MockPostListView.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		2336D29C267633A5001AF9B4 /* PostList */ = {
+			isa = PBXGroup;
+			children = (
+				2336D29F267633D1001AF9B4 /* Factories */,
+				2336D29726763279001AF9B4 /* PostListInteractorTests.swift */,
+				2336D29D267633B2001AF9B4 /* PostListPresenterTests.swift */,
+			);
+			path = PostList;
+			sourceTree = "<group>";
+		};
+		2336D29F267633D1001AF9B4 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				2336D2A0267633DE001AF9B4 /* PostListFactoryTests.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -492,7 +537,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2336D22F26760D16001AF9B4 /* D4LTests.swift in Sources */,
+				2336D2A326763C3D001AF9B4 /* MockPostListInteractor.swift in Sources */,
+				2336D2A726763C74001AF9B4 /* MockPostListViewModelFacotry.swift in Sources */,
+				2336D29E267633B2001AF9B4 /* PostListPresenterTests.swift in Sources */,
+				2336D2A1267633DE001AF9B4 /* PostListFactoryTests.swift in Sources */,
+				2336D2A926763C85001AF9B4 /* MockPostListView.swift in Sources */,
+				2336D2A526763C60001AF9B4 /* MockPostListRouter.swift in Sources */,
+				2336D29B26763389001AF9B4 /* MockPostListService.swift in Sources */,
+				2336D29826763279001AF9B4 /* PostListInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
