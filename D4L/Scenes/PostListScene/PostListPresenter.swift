@@ -15,6 +15,7 @@ final class PostListPresenter: PostListPresenterProtocol {
   private let interactor: PostListInteractorProtocol
   private let router: PostListRouterProtocol
   private let factory: PostListViewModelFactoring
+  private var viewModels: [PostListViewModel] = []
   
   init(
     _ view: PostListViewProtocol,
@@ -32,6 +33,13 @@ final class PostListPresenter: PostListPresenterProtocol {
   func onViewDidLoad() {
     interactor.listPosts()
   }
+
+  func numberOfRows() -> Int { viewModels.count }
+
+  func viewModelAt(index: Int) -> PostListViewModel? {
+    guard viewModels.count > index else { return nil }
+    return viewModels[index]
+  }
 }
 
 extension PostListPresenter: PostListInteractorDelegate {
@@ -41,7 +49,8 @@ extension PostListPresenter: PostListInteractorDelegate {
     case .posts(let posts):
       let viewModels = factory.create(from: posts)
       DispatchQueue.main.async {
-        self.view?.handleOutput(.posts(viewModels))
+        self.viewModels = viewModels
+        self.view?.handleOutput(.reload)
       }
     case .error:
       DispatchQueue.main.async {

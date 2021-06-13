@@ -27,6 +27,10 @@
 		2336D26526760F23001AF9B4 /* PostsNetworkRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D26426760F23001AF9B4 /* PostsNetworkRoutes.swift */; };
 		2336D269267613AE001AF9B4 /* PostListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D268267613AE001AF9B4 /* PostListViewModel.swift */; };
 		2336D26D267613F2001AF9B4 /* PostListViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D26C267613F2001AF9B4 /* PostListViewModelFactory.swift */; };
+		2336D27226761E5C001AF9B4 /* PostListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D27126761E5C001AF9B4 /* PostListCell.swift */; };
+		2336D27526761F35001AF9B4 /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D27426761F35001AF9B4 /* UITableViewCellExtension.swift */; };
+		2336D27726761F51001AF9B4 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D27626761F51001AF9B4 /* UITableViewExtension.swift */; };
+		2336D27926761F7A001AF9B4 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D27826761F7A001AF9B4 /* UIViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +76,10 @@
 		2336D26426760F23001AF9B4 /* PostsNetworkRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsNetworkRoutes.swift; sourceTree = "<group>"; };
 		2336D268267613AE001AF9B4 /* PostListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewModel.swift; sourceTree = "<group>"; };
 		2336D26C267613F2001AF9B4 /* PostListViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewModelFactory.swift; sourceTree = "<group>"; };
+		2336D27126761E5C001AF9B4 /* PostListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListCell.swift; sourceTree = "<group>"; };
+		2336D27426761F35001AF9B4 /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
+		2336D27626761F51001AF9B4 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		2336D27826761F7A001AF9B4 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +131,7 @@
 		2336D21626760D14001AF9B4 /* D4L */ = {
 			isa = PBXGroup;
 			children = (
+				2336D27326761F29001AF9B4 /* Extensions */,
 				2336D26626760F69001AF9B4 /* Networking */,
 				2336D25A26760E2A001AF9B4 /* Models */,
 				2336D24726760D62001AF9B4 /* Scenes */,
@@ -165,6 +174,7 @@
 		2336D24826760D6B001AF9B4 /* PostListScene */ = {
 			isa = PBXGroup;
 			children = (
+				2336D27026761E53001AF9B4 /* Cells */,
 				2336D26B267613E5001AF9B4 /* Factories */,
 				2336D2672676139E001AF9B4 /* ViewModels */,
 				2336D25F26760EB6001AF9B4 /* Services */,
@@ -217,6 +227,24 @@
 				2336D26C267613F2001AF9B4 /* PostListViewModelFactory.swift */,
 			);
 			path = Factories;
+			sourceTree = "<group>";
+		};
+		2336D27026761E53001AF9B4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2336D27126761E5C001AF9B4 /* PostListCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		2336D27326761F29001AF9B4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2336D27426761F35001AF9B4 /* UITableViewCellExtension.swift */,
+				2336D27626761F51001AF9B4 /* UITableViewExtension.swift */,
+				2336D27826761F7A001AF9B4 /* UIViewExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,8 +395,12 @@
 				2336D25626760D84001AF9B4 /* PostListInteractor.swift in Sources */,
 				2336D21826760D14001AF9B4 /* AppDelegate.swift in Sources */,
 				2336D21A26760D14001AF9B4 /* SceneDelegate.swift in Sources */,
+				2336D27926761F7A001AF9B4 /* UIViewExtension.swift in Sources */,
 				2336D25E26760E78001AF9B4 /* Comment.swift in Sources */,
 				2336D25C26760E36001AF9B4 /* Post.swift in Sources */,
+				2336D27726761F51001AF9B4 /* UITableViewExtension.swift in Sources */,
+				2336D27226761E5C001AF9B4 /* PostListCell.swift in Sources */,
+				2336D27526761F35001AF9B4 /* UITableViewCellExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

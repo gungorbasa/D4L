@@ -29,10 +29,12 @@ protocol PostListInteractorDelegate: AnyObject {
 // MARK: - Presenter
 protocol PostListPresenterProtocol: AnyObject {
   func onViewDidLoad()
+  func numberOfRows() -> Int
+  func viewModelAt(index: Int) -> PostListViewModel?
 }
 
 enum PostListPresenterOutput: Equatable {
-  case posts([PostListViewModel])
+  case reload
 }
 
 // MARK: - View

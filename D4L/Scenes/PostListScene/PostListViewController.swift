@@ -11,14 +11,37 @@ import UIKit
 final class PostListViewController: UIViewController {
   
   var presenter: PostListPresenterProtocol!
+  private let tableView = UITableView()
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    setup()
     presenter.onViewDidLoad()
   }
 
   override func loadView() {
-    view = UITableView()
+    view = tableView
+  }
+}
+
+extension PostListViewController: UITableViewDataSource {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    presenter.numberOfRows()
+  }
+
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    guard let viewModel = presenter.viewModelAt(index: indexPath.row) else { return UITableViewCell() }
+    let cell = tableView.dequeueReusableCell(PostListCell.self, for: indexPath)
+    cell.configure(with: viewModel)
+    return cell
+  }
+}
+
+private extension PostListViewController {
+  func setup() {
+    tableView.dataSource = self
+    tableView.register(cell: PostListCell.self)
+    tableView.separatorStyle = .none
   }
 }
 
@@ -26,8 +49,8 @@ extension PostListViewController: PostListViewProtocol {
   
   func handleOutput(_ output: PostListPresenterOutput) {
     switch output {
-    case .posts(let viewModels):
-      print(viewModels)
+    case .reload:
+      tableView.reloadData()
     }
   }
 }
