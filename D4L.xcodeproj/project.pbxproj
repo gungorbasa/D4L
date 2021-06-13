@@ -31,6 +31,12 @@
 		2336D27526761F35001AF9B4 /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D27426761F35001AF9B4 /* UITableViewCellExtension.swift */; };
 		2336D27726761F51001AF9B4 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D27626761F51001AF9B4 /* UITableViewExtension.swift */; };
 		2336D27926761F7A001AF9B4 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D27826761F7A001AF9B4 /* UIViewExtension.swift */; };
+		2336D283267623DA001AF9B4 /* PostDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D27C267623DA001AF9B4 /* PostDetailsPresenter.swift */; };
+		2336D284267623DA001AF9B4 /* PostDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D27D267623DA001AF9B4 /* PostDetailsRouter.swift */; };
+		2336D285267623DA001AF9B4 /* PostDetailsContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D27E267623DA001AF9B4 /* PostDetailsContracts.swift */; };
+		2336D286267623DA001AF9B4 /* PostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D27F267623DA001AF9B4 /* PostDetailsViewController.swift */; };
+		2336D287267623DA001AF9B4 /* PostDetailsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D280267623DA001AF9B4 /* PostDetailsBuilder.swift */; };
+		2336D288267623DA001AF9B4 /* PostDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D281267623DA001AF9B4 /* PostDetailsInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +86,12 @@
 		2336D27426761F35001AF9B4 /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
 		2336D27626761F51001AF9B4 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		2336D27826761F7A001AF9B4 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		2336D27C267623DA001AF9B4 /* PostDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsPresenter.swift; sourceTree = "<group>"; };
+		2336D27D267623DA001AF9B4 /* PostDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsRouter.swift; sourceTree = "<group>"; };
+		2336D27E267623DA001AF9B4 /* PostDetailsContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsContracts.swift; sourceTree = "<group>"; };
+		2336D27F267623DA001AF9B4 /* PostDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsViewController.swift; sourceTree = "<group>"; };
+		2336D280267623DA001AF9B4 /* PostDetailsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsBuilder.swift; sourceTree = "<group>"; };
+		2336D281267623DA001AF9B4 /* PostDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +178,7 @@
 		2336D24726760D62001AF9B4 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				2336D27A267623CA001AF9B4 /* PostDetailsScene */,
 				2336D24826760D6B001AF9B4 /* PostListScene */,
 			);
 			path = Scenes;
@@ -245,6 +258,19 @@
 				2336D27826761F7A001AF9B4 /* UIViewExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2336D27A267623CA001AF9B4 /* PostDetailsScene */ = {
+			isa = PBXGroup;
+			children = (
+				2336D27C267623DA001AF9B4 /* PostDetailsPresenter.swift */,
+				2336D27D267623DA001AF9B4 /* PostDetailsRouter.swift */,
+				2336D27E267623DA001AF9B4 /* PostDetailsContracts.swift */,
+				2336D27F267623DA001AF9B4 /* PostDetailsViewController.swift */,
+				2336D280267623DA001AF9B4 /* PostDetailsBuilder.swift */,
+				2336D281267623DA001AF9B4 /* PostDetailsInteractor.swift */,
+			);
+			path = PostDetailsScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,18 +414,24 @@
 				2336D26526760F23001AF9B4 /* PostsNetworkRoutes.swift in Sources */,
 				2336D25126760D84001AF9B4 /* PostListPresenter.swift in Sources */,
 				2336D26126760EC9001AF9B4 /* PostListService.swift in Sources */,
+				2336D285267623DA001AF9B4 /* PostDetailsContracts.swift in Sources */,
+				2336D284267623DA001AF9B4 /* PostDetailsRouter.swift in Sources */,
 				2336D25226760D84001AF9B4 /* PostListRouter.swift in Sources */,
+				2336D286267623DA001AF9B4 /* PostDetailsViewController.swift in Sources */,
 				2336D26D267613F2001AF9B4 /* PostListViewModelFactory.swift in Sources */,
 				2336D21C26760D14001AF9B4 /* ViewController.swift in Sources */,
 				2336D25326760D84001AF9B4 /* PostListContracts.swift in Sources */,
 				2336D25626760D84001AF9B4 /* PostListInteractor.swift in Sources */,
+				2336D288267623DA001AF9B4 /* PostDetailsInteractor.swift in Sources */,
 				2336D21826760D14001AF9B4 /* AppDelegate.swift in Sources */,
 				2336D21A26760D14001AF9B4 /* SceneDelegate.swift in Sources */,
+				2336D283267623DA001AF9B4 /* PostDetailsPresenter.swift in Sources */,
 				2336D27926761F7A001AF9B4 /* UIViewExtension.swift in Sources */,
 				2336D25E26760E78001AF9B4 /* Comment.swift in Sources */,
 				2336D25C26760E36001AF9B4 /* Post.swift in Sources */,
 				2336D27726761F51001AF9B4 /* UITableViewExtension.swift in Sources */,
 				2336D27226761E5C001AF9B4 /* PostListCell.swift in Sources */,
+				2336D287267623DA001AF9B4 /* PostDetailsBuilder.swift in Sources */,
 				2336D27526761F35001AF9B4 /* UITableViewCellExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

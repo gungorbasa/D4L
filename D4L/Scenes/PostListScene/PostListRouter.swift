@@ -21,8 +21,12 @@ final class PostListRouter: PostListRouterProtocol {
     case .alert(let title, let message):
       showAlertView(title: title, message: message)
     case .detail(let viewModel):
-      // TODO: Route to details screen
-      print("Selected: \(viewModel)")
+      let viewController = PostDetailsBuilder.make(with: viewModel)
+      guard let navigationController = view?.navigationController else {
+        view?.present(viewController, animated: true, completion: nil)
+        return
+      }
+      navigationController.pushViewController(viewController, animated: true)
     }
   }
 }
