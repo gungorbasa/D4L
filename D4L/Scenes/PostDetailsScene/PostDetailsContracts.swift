@@ -12,10 +12,13 @@ import Foundation
 protocol PostDetailsInteractorProtocol: AnyObject {
   
   var delegate: PostDetailsInteractorDelegate? { get set }
+
+  func fetchComments(postId: Int)
 }
 
 enum PostDetailsInteractorOutput {
-  
+  case comments([Comment])
+  case error(Error)
 }
 
 protocol PostDetailsInteractorDelegate: AnyObject {
@@ -40,7 +43,7 @@ protocol PostDetailsViewProtocol: AnyObject {
 
 // MARK: - Router
 enum PostDetailsRoute: Equatable {
-  
+  case alert(title: String, message: String)
 }
 
 protocol PostDetailsRouterProtocol: AnyObject {

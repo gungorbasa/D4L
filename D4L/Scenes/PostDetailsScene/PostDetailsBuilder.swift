@@ -6,6 +6,7 @@
 //  Copyright © 2021 ___ORGANIZATIONNAME___. All rights reserved.
 //
 
+import Networking
 import UIKit
 
 final class PostDetailsBuilder {
@@ -15,7 +16,8 @@ final class PostDetailsBuilder {
   static func make(with viewModel: PostListViewModel) -> PostDetailsViewController {
     let view = PostDetailsViewController()
     let router = PostDetailsRouter(view)
-    let interactor = PostDetailsInteractor()
+    let service = PostCommentsService(networking: NativeNetwork(decoder: JSONDecoder()))
+    let interactor = PostDetailsInteractor(service: service)
     let presenter = PostDetailsPresenter(view, interactor: interactor, router: router)
     view.presenter = presenter
     return view

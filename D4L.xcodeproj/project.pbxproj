@@ -37,6 +37,7 @@
 		2336D286267623DA001AF9B4 /* PostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D27F267623DA001AF9B4 /* PostDetailsViewController.swift */; };
 		2336D287267623DA001AF9B4 /* PostDetailsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D280267623DA001AF9B4 /* PostDetailsBuilder.swift */; };
 		2336D288267623DA001AF9B4 /* PostDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D281267623DA001AF9B4 /* PostDetailsInteractor.swift */; };
+		2336D28B26762556001AF9B4 /* PostCommentsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D28A26762556001AF9B4 /* PostCommentsService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		2336D27F267623DA001AF9B4 /* PostDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsViewController.swift; sourceTree = "<group>"; };
 		2336D280267623DA001AF9B4 /* PostDetailsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsBuilder.swift; sourceTree = "<group>"; };
 		2336D281267623DA001AF9B4 /* PostDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsInteractor.swift; sourceTree = "<group>"; };
+		2336D28A26762556001AF9B4 /* PostCommentsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCommentsService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +265,7 @@
 		2336D27A267623CA001AF9B4 /* PostDetailsScene */ = {
 			isa = PBXGroup;
 			children = (
+				2336D28926762549001AF9B4 /* Services */,
 				2336D27C267623DA001AF9B4 /* PostDetailsPresenter.swift */,
 				2336D27D267623DA001AF9B4 /* PostDetailsRouter.swift */,
 				2336D27E267623DA001AF9B4 /* PostDetailsContracts.swift */,
@@ -271,6 +274,14 @@
 				2336D281267623DA001AF9B4 /* PostDetailsInteractor.swift */,
 			);
 			path = PostDetailsScene;
+			sourceTree = "<group>";
+		};
+		2336D28926762549001AF9B4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2336D28A26762556001AF9B4 /* PostCommentsService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,6 +425,7 @@
 				2336D26526760F23001AF9B4 /* PostsNetworkRoutes.swift in Sources */,
 				2336D25126760D84001AF9B4 /* PostListPresenter.swift in Sources */,
 				2336D26126760EC9001AF9B4 /* PostListService.swift in Sources */,
+				2336D28B26762556001AF9B4 /* PostCommentsService.swift in Sources */,
 				2336D285267623DA001AF9B4 /* PostDetailsContracts.swift in Sources */,
 				2336D284267623DA001AF9B4 /* PostDetailsRouter.swift in Sources */,
 				2336D25226760D84001AF9B4 /* PostListRouter.swift in Sources */,

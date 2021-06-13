@@ -10,22 +10,29 @@ import Foundation
 
 final class PostDetailsPresenter: PostDetailsPresenterProtocol {
 
-    private unowned let view: PostDetailsViewProtocol
+  private weak var view: PostDetailsViewProtocol?
 
-    private let interactor: PostDetailsInteractorProtocol
-    private let router: PostDetailsRouterProtocol
+  private let interactor: PostDetailsInteractorProtocol
+  private let router: PostDetailsRouterProtocol
 
-    init(_ view: PostDetailsViewProtocol, interactor: PostDetailsInteractorProtocol, router: PostDetailsRouterProtocol) {
-        self.view = view
-        self.interactor = interactor
-        self.router = router
-        self.interactor.delegate = self
-    }
+  init(_ view: PostDetailsViewProtocol, interactor: PostDetailsInteractorProtocol, router: PostDetailsRouterProtocol) {
+    self.view = view
+    self.interactor = interactor
+    self.router = router
+    self.interactor.delegate = self
+  }
 }
 
 extension PostDetailsPresenter: PostDetailsInteractorDelegate {
 
-    func handleOutput(_ output: PostDetailsInteractorOutput) {
-
+  func handleOutput(_ output: PostDetailsInteractorOutput) {
+    switch output {
+    case .comments(let comments):
+      print(comments)
+    case .error:
+      DispatchQueue.main.async {
+        self.router.navigate(to: .alert(title: "Error", message: "An Error Occurred. Please, try again!"))
+      }
     }
+  }
 }
