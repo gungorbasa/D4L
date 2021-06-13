@@ -16,7 +16,7 @@ final class PostListBuilder {
     let router = PostListRouter(view)
     let service = PostListService(networking: NativeNetwork(decoder: JSONDecoder()))
     let interactor = PostListInteractor(service: service)
-    let presenter = PostListPresenter(view, interactor: interactor, router: router)
+    let presenter = PostListPresenter(view, interactor: interactor, factory: PostListViewModelFactory(), router: router)
     view.presenter = presenter
     return view
   }

@@ -14,12 +14,11 @@ final class PostListViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    setup()
     presenter.onViewDidLoad()
   }
-  
-  private func setup() {
-    
+
+  override func loadView() {
+    view = UITableView()
   }
 }
 
