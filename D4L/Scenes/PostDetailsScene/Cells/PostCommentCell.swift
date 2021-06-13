@@ -24,7 +24,7 @@ final class PostCommentCell: UITableViewCell {
   }
 
   func configure(with viewModel: PostCommentViewModel) {
-    title.font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.headline)
+    title.font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.subheadline)
     title.text = viewModel.name
 
     email.text = viewModel.email

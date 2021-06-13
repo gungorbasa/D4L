@@ -83,9 +83,11 @@ private extension PostDetailsContentView {
   }
 
   func setupLabels() {
+    titleLabel.textColor = .darkText
     titleLabel.numberOfLines = 0
     titleLabel.font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.headline)
 
+    detailsLabel.textColor = .tertiaryLabel
     detailsLabel.numberOfLines = 0
     detailsLabel.font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.caption1)
   }
