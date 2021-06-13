@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,7 @@
 		2336D25426760D84001AF9B4 /* PostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D24D26760D84001AF9B4 /* PostListViewController.swift */; };
 		2336D25526760D84001AF9B4 /* PostListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D24E26760D84001AF9B4 /* PostListBuilder.swift */; };
 		2336D25626760D84001AF9B4 /* PostListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D24F26760D84001AF9B4 /* PostListInteractor.swift */; };
+		2336D25926760E0C001AF9B4 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 2336D25826760E0C001AF9B4 /* Networking */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2336D25926760E0C001AF9B4 /* Networking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +177,9 @@
 			dependencies = (
 			);
 			name = D4L;
+			packageProductDependencies = (
+				2336D25826760E0C001AF9B4 /* Networking */,
+			);
 			productName = D4L;
 			productReference = 2336D21426760D14001AF9B4 /* D4L.app */;
 			productType = "com.apple.product-type.application";
@@ -246,6 +251,9 @@
 				Base,
 			);
 			mainGroup = 2336D20B26760D14001AF9B4;
+			packageReferences = (
+				2336D25726760E0C001AF9B4 /* XCRemoteSwiftPackageReference "Networking" */,
+			);
 			productRefGroup = 2336D21526760D14001AF9B4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -621,6 +629,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2336D25726760E0C001AF9B4 /* XCRemoteSwiftPackageReference "Networking" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/gungorbasa/Networking";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2336D25826760E0C001AF9B4 /* Networking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2336D25726760E0C001AF9B4 /* XCRemoteSwiftPackageReference "Networking" */;
+			productName = Networking;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2336D20C26760D14001AF9B4 /* Project object */;
 }
