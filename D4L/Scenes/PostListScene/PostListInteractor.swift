@@ -11,5 +11,9 @@ import Foundation
 final class PostListInteractor: PostListInteractorProtocol {
   
   weak var delegate: PostListInteractorDelegate?
-  
+  private let service: PostListServing
+
+  init(service: PostListServing) {
+    self.service = service
+  }
 }
