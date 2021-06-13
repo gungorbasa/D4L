@@ -14,6 +14,12 @@
 		2336D22426760D16001AF9B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2336D22226760D16001AF9B4 /* LaunchScreen.storyboard */; };
 		2336D22F26760D16001AF9B4 /* D4LTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D22E26760D16001AF9B4 /* D4LTests.swift */; };
 		2336D23A26760D16001AF9B4 /* D4LUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D23926760D16001AF9B4 /* D4LUITests.swift */; };
+		2336D25126760D84001AF9B4 /* PostListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D24A26760D84001AF9B4 /* PostListPresenter.swift */; };
+		2336D25226760D84001AF9B4 /* PostListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D24B26760D84001AF9B4 /* PostListRouter.swift */; };
+		2336D25326760D84001AF9B4 /* PostListContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D24C26760D84001AF9B4 /* PostListContracts.swift */; };
+		2336D25426760D84001AF9B4 /* PostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D24D26760D84001AF9B4 /* PostListViewController.swift */; };
+		2336D25526760D84001AF9B4 /* PostListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D24E26760D84001AF9B4 /* PostListBuilder.swift */; };
+		2336D25626760D84001AF9B4 /* PostListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2336D24F26760D84001AF9B4 /* PostListInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,12 @@
 		2336D23526760D16001AF9B4 /* D4LUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = D4LUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2336D23926760D16001AF9B4 /* D4LUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D4LUITests.swift; sourceTree = "<group>"; };
 		2336D23B26760D16001AF9B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2336D24A26760D84001AF9B4 /* PostListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListPresenter.swift; sourceTree = "<group>"; };
+		2336D24B26760D84001AF9B4 /* PostListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListRouter.swift; sourceTree = "<group>"; };
+		2336D24C26760D84001AF9B4 /* PostListContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListContracts.swift; sourceTree = "<group>"; };
+		2336D24D26760D84001AF9B4 /* PostListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewController.swift; sourceTree = "<group>"; };
+		2336D24E26760D84001AF9B4 /* PostListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListBuilder.swift; sourceTree = "<group>"; };
+		2336D24F26760D84001AF9B4 /* PostListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +109,7 @@
 		2336D21626760D14001AF9B4 /* D4L */ = {
 			isa = PBXGroup;
 			children = (
+				2336D24726760D62001AF9B4 /* Scenes */,
 				2336D21726760D14001AF9B4 /* AppDelegate.swift */,
 				2336D21926760D14001AF9B4 /* SceneDelegate.swift */,
 				2336D21B26760D14001AF9B4 /* ViewController.swift */,
@@ -123,6 +136,27 @@
 				2336D23B26760D16001AF9B4 /* Info.plist */,
 			);
 			path = D4LUITests;
+			sourceTree = "<group>";
+		};
+		2336D24726760D62001AF9B4 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				2336D24826760D6B001AF9B4 /* PostListScene */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		2336D24826760D6B001AF9B4 /* PostListScene */ = {
+			isa = PBXGroup;
+			children = (
+				2336D24A26760D84001AF9B4 /* PostListPresenter.swift */,
+				2336D24B26760D84001AF9B4 /* PostListRouter.swift */,
+				2336D24C26760D84001AF9B4 /* PostListContracts.swift */,
+				2336D24D26760D84001AF9B4 /* PostListViewController.swift */,
+				2336D24E26760D84001AF9B4 /* PostListBuilder.swift */,
+				2336D24F26760D84001AF9B4 /* PostListInteractor.swift */,
+			);
+			path = PostListScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,7 +288,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2336D25426760D84001AF9B4 /* PostListViewController.swift in Sources */,
+				2336D25526760D84001AF9B4 /* PostListBuilder.swift in Sources */,
+				2336D25126760D84001AF9B4 /* PostListPresenter.swift in Sources */,
+				2336D25226760D84001AF9B4 /* PostListRouter.swift in Sources */,
 				2336D21C26760D14001AF9B4 /* ViewController.swift in Sources */,
+				2336D25326760D84001AF9B4 /* PostListContracts.swift in Sources */,
+				2336D25626760D84001AF9B4 /* PostListInteractor.swift in Sources */,
 				2336D21826760D14001AF9B4 /* AppDelegate.swift in Sources */,
 				2336D21A26760D14001AF9B4 /* SceneDelegate.swift in Sources */,
 			);
